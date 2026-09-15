@@ -1,0 +1,55 @@
+DIAGNOSTICO DE CONEXION A GAIA DR3
+======================================================================
+
+Consultando 5 fuentes variables de Gaia...
+
+Source IDs obtenidos: [np.int64(56075093274240), np.int64(154863636444160), np.int64(180736519432320), np.int64(205746113591040), np.int64(435887640983808)]
+
+Descargando fotometría por época...
+
+Claves disponibles en datalink: ['EPOCH_PHOTOMETRY-Gaia DR3 154863636444160.xml', 'EPOCH_PHOTOMETRY-Gaia DR3 180736519432320.xml', 'EPOCH_PHOTOMETRY-Gaia DR3 205746113591040.xml', 'EPOCH_PHOTOMETRY-Gaia DR3 435887640983808.xml', 'EPOCH_PHOTOMETRY-Gaia DR3 56075093274240.xml']
+
+Procesando clave: EPOCH_PHOTOMETRY-Gaia DR3 154863636444160.xml
+
+Columnas disponibles en los datos de fotometría por época:
+  - transit_id (int64)
+  - g_transit_time (float64)
+  - g_transit_flux (float64)
+  - g_transit_flux_error (float64)
+  - g_transit_flux_over_error (float32)
+  - g_transit_mag (float64)
+  - bp_obs_time (float64)
+  - bp_flux (float64)
+  - bp_flux_error (float64)
+  - bp_flux_over_error (float32)
+  - bp_mag (float64)
+  - rp_obs_time (float64)
+  - rp_flux (float64)
+  - rp_flux_error (float64)
+  - rp_flux_over_error (float32)
+  - rp_mag (float64)
+  - variability_flag_g_reject (bool)
+  - variability_flag_bp_reject (bool)
+  - variability_flag_rp_reject (bool)
+  - g_other_flags (int64)
+  - bp_other_flags (int64)
+  - rp_other_flags (int64)
+  - rejected_by_photometry (bool)
+
+Número de mediciones: 22
+
+Muestra de los datos (primeras 5 filas):
+
+  [1] transit_id=17295180981491148  g_transit_time=1709.621185  g_transit_flux=20058.707476  g_transit_flux_error=53.396310  g_transit_flux_over_error=375.6571960449219  g_transit_mag=14.931610  bp_obs_time=1709.621491  bp_flux=1780.127437  bp_flux_error=41.262435  bp_flux_over_error=43.1416015625  bp_mag=17.212414  rp_obs_time=1709.621579  rp_flux=29464.799019  rp_flux_error=86.669217  rp_flux_over_error=339.96844482421875  rp_mag=13.574637  variability_flag_g_reject=False  variability_flag_bp_reject=False  variability_flag_rp_reject=False  g_other_flags=1048709  bp_other_flags=0  rp_other_flags=0  rejected_by_photometry=False  
+  [2] transit_id=23469681091032181  g_transit_time=1821.284477  g_transit_flux=55235.143348  g_transit_flux_error=88.533761  g_transit_flux_over_error=623.887939453125  g_transit_mag=13.831828  bp_obs_time=1821.284791  bp_flux=15781.788541  bp_flux_error=63.449803  bp_flux_over_error=248.72872924804688  bp_mag=14.843152  rp_obs_time=1821.284878  rp_flux=57621.673557  rp_flux_error=117.123251  rp_flux_over_error=491.97467041015625  rp_mag=12.846431  variability_flag_g_reject=False  variability_flag_bp_reject=False  variability_flag_rp_reject=False  g_other_flags=4097  bp_other_flags=1024  rp_other_flags=0  rejected_by_photometry=False  
+  [3] transit_id=23473773363372569  g_transit_time=1821.358478  g_transit_flux=55753.425791  g_transit_flux_error=242.853564  g_transit_flux_over_error=229.57630920410156  g_transit_mag=13.821688  bp_obs_time=1821.358792  bp_flux=16187.502957  bp_flux_error=64.611077  bp_flux_over_error=250.53758239746094  bp_mag=14.815593  rp_obs_time=1821.358879  rp_flux=56948.109733  rp_flux_error=117.827310  rp_flux_over_error=483.31842041015625  rp_mag=12.859197  variability_flag_g_reject=False  variability_flag_bp_reject=False  variability_flag_rp_reject=False  g_other_flags=4097  bp_other_flags=1024  rp_other_flags=0  rejected_by_photometry=False  
+  [4] transit_id=24565974782883173  g_transit_time=1841.108691  g_transit_flux=64917.841155  g_transit_flux_error=118.000772  g_transit_flux_over_error=550.1475830078125  g_transit_mag=13.656457  bp_obs_time=1841.109006  bp_flux=19581.279017  bp_flux_error=71.798883  bp_flux_over_error=272.7239990234375  bp_mag=14.608940  rp_obs_time=1841.109093  rp_flux=66189.507159  rp_flux_error=126.401948  rp_flux_over_error=523.64306640625  rp_mag=12.695923  variability_flag_g_reject=False  variability_flag_bp_reject=False  variability_flag_rp_reject=False  g_other_flags=5119  bp_other_flags=1024  rp_other_flags=0  rejected_by_photometry=False  
+  [5] transit_id=26223991370346761  g_transit_time=1871.090181  g_transit_flux=54770.691753  g_transit_flux_error=167.866387  g_transit_flux_over_error=326.2755126953125  g_transit_mag=13.840996  bp_obs_time=1871.090495  bp_flux=12701.601137  bp_flux_error=69.704371  bp_flux_over_error=182.22100830078125  bp_mag=15.078896  rp_obs_time=1871.090585  rp_flux=62377.849202  rp_flux_error=118.730469  rp_flux_over_error=525.37353515625  rp_mag=12.760320  variability_flag_g_reject=False  variability_flag_bp_reject=False  variability_flag_rp_reject=False  g_other_flags=4097  bp_other_flags=1024  rp_other_flags=0  rejected_by_photometry=False  
+
+----------------------------------------------------------------------
+VERIFICACION DE COLUMNAS IMPORTANTES:
+  ✗ Columnas faltantes: ['mag', 'time', 'band', 'flux', 'flux_error']
+
+----------------------------------------------------------------------
+DIAGNOSTICO COMPLETADO
+----------------------------------------------------------------------

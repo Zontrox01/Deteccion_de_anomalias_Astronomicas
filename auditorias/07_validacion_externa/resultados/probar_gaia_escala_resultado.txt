@@ -1,0 +1,59 @@
+======================================================================
+PRUEBA A MAYOR ESCALA DEL ADAPTADOR DE GAIA DR3 (300 objetos)
+======================================================================
+
+BASE_PROYECTO: C:\Users\Usuario\Documents\Astronomia
+
+  ✓ Importación de anomaly_detector exitosa
+Creando adaptador Gaia DR3...
+  ✓ Adaptador creado correctamente
+Cargando dataset (puede tardar varios minutos)...
+  ✓ Dataset cargado correctamente
+
+======================================================================
+RESULTADO DE LA CARGA
+======================================================================
+Objetos solicitados (clasificados en Gaia)  : 300
+Objetos con al menos una curva valida        : 300
+Curvas totales (todas las bandas)            : 900
+Descartados por LightCurve.validar()         : 0
+Tiempo total                                  : 308.6s (1.03s por objeto solicitado)
+Ningun lote fallo por red -- paginacion completa sin incidentes.
+
+Objetos solicitados pero SIN curva final y SIN lote fallido conocido: 0
+
+======================================================================
+DIVERSIDAD DE CLASES OBTENIDAS
+======================================================================
+  LPV            : 111
+  ECL            : 91
+  AGN            : 37
+  S              : 31
+  RS             : 9
+  RR             : 9
+  DSCT|GDOR|SXPHE: 6
+  SOLAR_LIKE     : 5
+  ACV|CP|MCP|ROAM|ROAP|SXARI: 1
+
+======================================================================
+EXTRAYENDO FEATURES (mismo pipeline que StarEmbed)
+======================================================================
+Features extraidas para 300 objetos en 0.2s
+Objetos con algun NaN en las 12 variables: 0 / 300
+
+Resumen estadistico de las 12 variables:
+           median  standard_deviation  median_absolute_deviation   amplitude  percent_amplitude  inter_percentile_range_25        skew    kurtosis   stetson_K         eta        chi2  maximum_slope
+count  300.000000          300.000000                 300.000000  300.000000         300.000000                 300.000000  300.000000  300.000000  300.000000  300.000000  300.000000     300.000000
+mean    15.646451            0.148122                   0.086727    0.276959           0.018235                   0.331822    0.533595    0.595055    0.803425    1.329591    1.024183       2.781371
+std      2.911312            0.159444                   0.111113    0.264098           0.019644                   0.394216    1.010685    3.353767    0.087344    0.775867    0.007679       3.108049
+min      7.914476            0.007040                   0.002827    0.014170           0.000975                   0.016059   -1.344841   -1.671227    0.431535    0.079031    1.007937       0.097307
+25%     13.179730            0.063741                   0.029614    0.132527           0.008506                   0.118318   -0.151094   -0.953348    0.767370    0.631230    1.018519       0.328942
+50%     15.845124            0.104726                   0.053587    0.205520           0.012817                   0.214820    0.366671   -0.366909    0.821377    1.184363    1.022222       1.219092
+75%     18.296297            0.173445                   0.098951    0.324607           0.019828                   0.397398    0.909144    0.539126    0.862370    2.048634    1.027778       4.960413
+max     20.420829            1.017930                   0.798234    1.716261           0.134164                   2.467115    4.670645   22.581156    0.942057    3.132467    1.047619      14.839382
+
+======================================================================
+VEREDICTO
+======================================================================
+Tasa de exito (cargados / solicitados): 100.0%
+-> El adaptador se comporta de forma fiable a esta escala. Listo para considerar en la interfaz, con la reserva de que 300 objetos sigue siendo modesto comparado con un uso real (miles de objetos).

@@ -1,0 +1,69 @@
+PRUEBA PEQUEÑA DEL ADAPTADOR DE GAIA DR3 (5 objetos)
+======================================================================
+
+BASE_PROYECTO: C:\Users\Usuario\Documents\Astronomia
+anomaly_detector: C:\Users\Usuario\Documents\Astronomia\anomaly_detector
+
+  ✓ Importación de anomaly_detector exitosa
+Creando adaptador Gaia DR3 (max_objetos=5)...
+  ✓ Adaptador creado correctamente
+Cargando dataset (puede tardar unos segundos)...
+  ✓ Dataset cargado correctamente
+
+Objetos unicos cargados: 5
+Curvas totales (todas las bandas): 15
+Descartadas por invalidas: 0
+
+  5902430553988708096 (clase=LPV):
+    banda=g  n_obs=44
+    banda=bp  n_obs=41
+    banda=rp  n_obs=41
+  5902457217146536064 (clase=LPV):
+    banda=g  n_obs=48
+    banda=bp  n_obs=43
+    banda=rp  n_obs=43
+  5902531949575015424 (clase=LPV):
+    banda=g  n_obs=43
+    banda=bp  n_obs=40
+    banda=rp  n_obs=41
+  5902560674317076736 (clase=LPV):
+    banda=g  n_obs=41
+    banda=bp  n_obs=38
+    banda=rp  n_obs=38
+  5902651968135129472 (clase=ECL):
+    banda=g  n_obs=44
+    banda=bp  n_obs=43
+    banda=rp  n_obs=44
+
+Extrayendo las 12 variables (mismo pipeline que StarEmbed, sin cambios)...
+  ✓ Features extraidas correctamente
+
+Features extraidas:
+          id_objeto clase    median  standard_deviation  median_absolute_deviation  amplitude  percent_amplitude  inter_percentile_range_25      skew  kurtosis  stetson_K      eta     chi2  maximum_slope
+5902430553988708096   LPV 13.238668            0.076452                   0.043066   0.201302           0.015183                   0.139858  0.654690  0.998209   0.780333 0.777305 1.023256       0.298204
+5902457217146536064   LPV 13.876913            0.043921                   0.024516   0.131500           0.009479                   0.075342 -0.399869  2.459784   0.714851 0.913570 1.021277       0.277353
+5902531949575015424   LPV 13.346086            0.043766                   0.038821   0.082062           0.006148                   0.095092  0.513740 -0.566512   0.852601 0.741693 1.023810       0.166157
+5902560674317076736   LPV 11.580395            0.905949                   0.658812   1.585270           0.132569                   2.138378  0.138340 -1.269043   0.906464 0.678456 1.025000       1.845468
+5902651968135129472   ECL 19.531650            0.090392                   0.045482   0.206883           0.010584                   0.192633  1.288401  1.718262   0.730887 2.354734 1.023256       4.396327
+
+Estadisticas de features:
+  median: mean=14.3147, std=3.0406, min=11.5804, max=19.5316, n=5
+  standard_deviation: mean=0.2321, std=0.3772, min=0.0438, max=0.9059, n=5
+  median_absolute_deviation: mean=0.1621, std=0.2778, min=0.0245, max=0.6588, n=5
+  amplitude: mean=0.4414, std=0.6415, min=0.0821, max=1.5853, n=5
+  percent_amplitude: mean=0.0348, std=0.0548, min=0.0061, max=0.1326, n=5
+  inter_percentile_range_25: mean=0.5283, std=0.9012, min=0.0753, max=2.1384, n=5
+  skew: mean=0.4391, std=0.6260, min=-0.3999, max=1.2884, n=5
+  kurtosis: mean=0.6681, std=1.5571, min=-1.2690, max=2.4598, n=5
+  stetson_K: mean=0.7970, std=0.0813, min=0.7149, max=0.9065, n=5
+  eta: mean=1.0932, std=0.7105, min=0.6785, max=2.3547, n=5
+  chi2: mean=1.0233, std=0.0013, min=1.0213, max=1.0250, n=5
+  maximum_slope: mean=1.3967, std=1.8147, min=0.1662, max=4.3963, n=5
+
+----------------------------------------------------------------------
+DIAGNOSTICO
+----------------------------------------------------------------------
+
+PRUEBA OK: el adaptador funciona de principio a fin sobre datos reales de Gaia DR3, y el mismo extraer_features_dataset() de StarEmbed funciona sin ningun cambio -- confirma que el esquema canonico generaliza de verdad a un segundo dataset.
+
+Tiempo total: 36.39 segundos

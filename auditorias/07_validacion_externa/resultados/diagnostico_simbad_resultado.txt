@@ -1,0 +1,22 @@
+CONSULTA SIMBAD - RESULTADOS
+======================================================================
+Coordenadas: RA=159.270417, DEC=-10.627778
+Radio: 5.0 arcsec
+Objetos encontrados: 1
+
+----------------------------------------------------------------------
+COLUMNAS DISPONIBLES:
+  - main_id
+  - ra
+  - dec
+  - coo_err_maj
+  - coo_err_min
+  - coo_err_angle
+  - coo_wavelength
+  - coo_bibcode
+  - otype
+
+----------------------------------------------------------------------
+DATOS (primeras filas):
+
+  [1] main_id=CRTS J103704.9-103740  ra=159.2704592578  dec=-10.62795219402  coo_err_maj=0.014600000344216824  coo_err_min=0.014999999664723873  coo_err_angle=90  coo_wavelength=O  coo_bibcode=2020yCat.1350....0G  otype=EB*  
