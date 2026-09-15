@@ -1,0 +1,10 @@
+Poner en esta carpeta los archivos descargados de:
+
+https://huggingface.co/datasets/StarEmbed/ZTF_40k/tree/main/data
+
+anom-00000-of-00001.parquet
+test-00000-of-00001.parquet
+train-00000-of-00002.parquet
+train-00001-of-00002.parquet
+validation-00000-of-00001.parquet
+

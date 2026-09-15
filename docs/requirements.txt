@@ -1,0 +1,48 @@
+# requirements.txt — Detector de Anomalías Astronómicas
+#
+# Instalación (Windows, si pip da conflictos con el entorno del sistema):
+#   pip install -r requirements.txt --break-system-packages
+#
+# Repasado contra todo lo usado en la sesión de desarrollo — ver FILES.md
+# para qué script/módulo usa cada una.
+
+# --- Núcleo: manipulación de datos y cálculo numérico ---
+# Usado en: absolutamente todos los scripts (pipeline de features,
+# detección de anomalías, verificación, controles de integridad).
+pandas>=2.0
+numpy>=1.24
+
+# --- Backend de lectura de parquet ---
+# pandas.read_parquet lo necesita para poder leer los ficheros de
+# StarEmbed (train/test/validation/anom). Sin esto, ImportError.
+pyarrow>=14.0
+
+# --- Machine learning ---
+# RandomForestClassifier, IsolationForest, LocalOutlierFactor,
+# StandardScaler, roc_auc_score, balanced_accuracy_score, etc.
+# Usado en: 20-24b, deteccion.py, verificar_paquete.py,
+# validar_contra_anom.py, comparar_periodo_anom.py,
+# probar_features_forma.py.
+scikit-learn>=1.3
+
+# --- Estadística ---
+# scipy.stats.chisquare — usado en 20b (control de representatividad
+# del muestreo).
+scipy>=1.11
+
+# --- Manifiestos de fuentes de datos declarativas ---
+# Usado en: anomaly_detector/adapters/registro.py y tabular_generico.py
+# (lectura de fuentes/*.yaml).
+pyyaml>=6.0
+
+# --- Cruce con catálogos astronómicos externos ---
+# Usado en: cruzar_candidatos_catalogos.py (SIMBAD, VizieR/VSX,
+# manejo de coordenadas celestes).
+astropy>=5.3
+astroquery>=0.4.7
+
+# --- Interfaz grafica (app/) ---
+# PySide6: la interfaz en si. matplotlib: grafico de curva de luz
+# embebido (app/widgets/grafico_curva.py, backend_qtagg).
+PySide6>=6.5
+matplotlib>=3.5

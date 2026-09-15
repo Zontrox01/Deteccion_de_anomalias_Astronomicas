@@ -1,0 +1,14 @@
+Copiar en esta carpeta los archivos descargados de:
+
+https://zenodo.org/records/4318700?utm_source=chatgpt.com
+
+
+feature_deep.dat
+feature_deep.name
+feature_disk.dat
+feature_disk.name
+feature_m31.dat
+feature_m31.name
+oid_deep.dat
+oid_disk.dat
+oid_m31.dat

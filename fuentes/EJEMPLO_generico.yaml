@@ -1,0 +1,95 @@
+# ======================================================================
+# PLANTILLA DE MANIFIESTO DE FUENTE DE DATOS (Nivel 1 -- declarativa)
+# ======================================================================
+#
+# Copia este fichero, renombralo (p.ej. mi_survey.yaml) y edita los
+# valores para que el selector "Fuente de datos" de la interfaz
+# reconozca tu dataset SIN que tengas que escribir ningun Python.
+#
+# Requisito de formato: tu fichero de datos debe ser CSV o parquet,
+# en formato "largo" -- una fila por cada punto observado (un objeto
+# con 200 observaciones son 200 filas, no una fila con un array de
+# 200 valores). Es el formato mas comun en exports de fotometria.
+#
+# Si tu fuente tiene una estructura distinta (arrays anidados por
+# objeto, como StarEmbed; o requiere consultar un servicio remoto
+# paginado, como Gaia DR3), este mecanismo declarativo no te sirve --
+# hace falta un adaptador Python. Ver anomaly_detector/adapters/base.py
+# y anomaly_detector/adapters/starembed.py como referencia.
+# ======================================================================
+
+# Identificador interno (opcional). Si lo omites, se usa el nombre de
+# este fichero sin la extension (p.ej. "mi_survey").
+id: ejemplo_generico
+
+# Nombre y descripcion que vera el usuario en el selector de la interfaz.
+nombre: "Ejemplo generico (plantilla)"
+descripcion: >
+  Plantilla de manifiesto para datasets tabulares en formato largo
+  (una fila por objeto-epoca). Copia y adapta este fichero para tu
+  propia fuente de datos.
+
+# Version del formato de manifiesto (para poder evolucionarlo sin
+# romper manifiestos ya escritos por la comunidad).
+version_esquema: 1
+
+# --------------------------------------------------------------------
+# ACCESO: como leer el fichero de datos.
+# --------------------------------------------------------------------
+acceso:
+  formato: csv          # "csv" | "parquet"
+  # ruta_defecto: null  # opcional; si no se indica, el usuario debe
+                         # proporcionar la ruta al usar esta fuente
+                         # (asi es como funciona normalmente: el
+                         # manifiesto describe el FORMATO, el usuario
+                         # aporta SU fichero concreto con ese formato).
+
+# --------------------------------------------------------------------
+# FORMATO DE LOS DATOS.
+# --------------------------------------------------------------------
+# Por ahora solo se soporta "largo": una fila por punto observado.
+formato_datos: largo
+
+# --------------------------------------------------------------------
+# MAPEO DE COLUMNAS: como se llaman en TU fichero las columnas que el
+# esquema canonico necesita. id_objeto, tiempo y magnitud son
+# obligatorias. error y clase_conocida son opcionales -- si tu
+# fichero no las tiene, simplemente no incluyas esas lineas.
+# --------------------------------------------------------------------
+mapeo_columnas:
+  id_objeto: "object_id"        # columna con el identificador del objeto
+  tiempo: "mjd"                 # columna con el tiempo de cada observacion
+  magnitud: "mag"                # columna con la magnitud (o flujo)
+  error: "mag_err"               # opcional: incertidumbre por punto
+  banda: "filtro"                # opcional: columna con la banda/filtro
+  clase_conocida: "clase"        # opcional: etiqueta de clase, si el
+                                  # dataset viene etiquetado
+
+# Si tu fichero NO tiene una columna de banda (todas las observaciones
+# son de un unico filtro), quita la linea "banda:" de mapeo_columnas
+# de arriba y descomenta esta:
+# banda_fija: "r"
+
+# --------------------------------------------------------------------
+# UNIDADES: ajustes sobre la columna de tiempo.
+# --------------------------------------------------------------------
+unidades:
+  # offset_tiempo se SUMA al valor crudo de la columna de tiempo.
+  # Ejemplos de uso:
+  #   - tu columna ya esta en MJD -> offset_tiempo: 0.0
+  #   - tu columna esta en JD -> offset_tiempo: -2400000.5  (JD a MJD)
+  #   - tu columna tiene un offset de referencia propio (como el BJD
+  #     de Gaia, referenciado a 2010-01-01) -> usa el offset que
+  #     corresponda para dejarlo en dias, consistente entre objetos.
+  offset_tiempo: 0.0
+
+# --------------------------------------------------------------------
+# VALORES NULOS: strings en tu fichero que deben tratarse como "sin
+# dato" (se convierten a NaN antes de construir las curvas).
+# --------------------------------------------------------------------
+valores_nulos:
+  - "NaN"
+  - "null"
+  - ""
+  - "-999"
+  - "-99.9"
