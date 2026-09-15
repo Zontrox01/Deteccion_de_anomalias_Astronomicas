@@ -1,2 +1,0 @@
-Poner cambiar todos los archivos para que funcionen desde la nueva ubicación y dárselo a sonnet para que actualice los readme y Files
-qué es https://huggingface.co/
