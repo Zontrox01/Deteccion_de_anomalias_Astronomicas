@@ -1,9 +1,0 @@
-experimento,accuracy_rf,accuracy_logistica
-42 features,0.9896666667,0.9536000000
-sin_eta_e,0.9898666667,0.9504333333
-sin_eta_e_medias,0.9848333333,0.9457666667
-sin_eta_e_tendencias,0.9573666667,0.8551333333
-sin_eta_e_medias_tendencias,0.9447666667,0.8541333333
-sin_magnitud_escala,0.9803333333,0.9201000000
-solo_temporales,0.8040000000,0.6391333333
-etiquetas_aleatorias,0.3346000000,-
