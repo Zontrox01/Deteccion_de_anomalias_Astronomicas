@@ -1,0 +1,166 @@
+======================================================================
+10_control_grupos_informe.txt
+======================================================================
+
+INFORME DE AUDITORÍA
+10_control_grupos.py — CONTROL DE FUGA POR GRUPOS
+
+Estado: DESCARTADO
+Resultado: NO VÁLIDO / NO COMPLETADO
+Uso en el estudio: NINGUNO
+
+======================================================================
+1. OBJETIVO DE LA PRUEBA
+======================================================================
+
+El objetivo de 10_control_grupos.py era intentar detectar una posible
+fuga de información (data leakage) producida por la forma en que se
+dividen los datos.
+
+La idea era comprobar si el rendimiento podía estar artificialmente
+inflado porque objetos relacionados aparecieran simultáneamente en
+entrenamiento y prueba.
+
+El enfoque previsto era buscar columnas candidatas para definir grupos,
+por ejemplo:
+
+    field
+    observation
+    visit
+    u otras equivalentes
+
+y comparar un reparto aleatorio con repartos respetando grupos mediante
+GroupShuffleSplit y/o GroupKFold.
+
+La pregunta experimental era:
+
+    ¿Disminuye el rendimiento cuando se impide que registros del mismo
+    grupo aparezcan simultáneamente en TRAIN y TEST?
+
+======================================================================
+2. RESULTADO DE LA EJECUCIÓN
+======================================================================
+
+La prueba NO llegó a completarse con éxito.
+
+No existe un resultado experimental válido que permita comparar:
+
+    - split aleatorio;
+    - GroupShuffleSplit;
+    - GroupKFold.
+
+Por tanto, no se obtuvieron métricas válidas de este control.
+
+======================================================================
+3. INCOMPATIBILIDAD CON LOS DATOS DEL PROYECTO
+======================================================================
+
+Además del fallo de ejecución, el script utilizaba una estructura de
+entrada diferente de la empleada en el resto de esta rama.
+
+10_control_grupos.py esperaba:
+
+    M31.csv
+    DEEP.csv
+    DISK.csv
+
+Sin embargo, los datos utilizados en esta rama estaban almacenados en
+formato:
+
+    feature_m31.dat
+    feature_deep.dat
+    feature_disk.dat
+
+junto con los correspondientes ficheros .name y estructuras memmap.
+
+No hay evidencia de que los CSV esperados por 10_control_grupos.py
+hubieran formado parte de la estructura real del proyecto.
+
+Por tanto, este script no constituye una prueba ejecutada sobre la
+estructura de datos válida de esta rama.
+
+======================================================================
+4. QUÉ SE PUEDE CONCLUIR
+======================================================================
+
+NO se puede concluir mediante esta prueba:
+
+    - que exista fuga de información;
+    - que no exista fuga de información;
+    - que el split aleatorio sea incorrecto;
+    - que GroupShuffleSplit produzca un resultado diferente;
+    - que GroupKFold confirme o descarte leakage.
+
+El único resultado establecido es que el experimento de control por
+grupos no se completó y no produjo resultados válidos.
+
+======================================================================
+5. VALOR DE LA HIPÓTESIS
+======================================================================
+
+La hipótesis que motivaba la prueba era pertinente:
+
+    comprobar si la estructura de grupos podía producir una fuga de
+    información entre entrenamiento y prueba.
+
+Sin embargo, una hipótesis válida no convierte en válida una prueba que
+no ha podido ejecutarse correctamente.
+
+Por ello debe distinguirse entre:
+
+    Hipótesis       : RELEVANTE
+    Diseño previsto : RAZONABLE
+    Ejecución       : FALLIDA
+    Resultados      : NO DISPONIBLES
+    Evidencia       : NINGUNA
+
+======================================================================
+6. DECISIÓN
+======================================================================
+
+10_control_grupos.py queda:
+
+    DESCARTADO
+
+No debe utilizarse para justificar ninguna conclusión científica ni
+ninguna métrica del proyecto.
+
+Tampoco debe citarse como evidencia de ausencia o presencia de fuga.
+
+======================================================================
+7. CONTROL VÁLIDO
+======================================================================
+
+El control de campo válido para esta rama del proyecto es:
+
+    10_control_campo.py
+
+Por tanto, para estudiar la posible influencia del campo debe utilizarse
+ese control y no 10_control_grupos.py.
+
+======================================================================
+8. TRAZABILIDAD
+======================================================================
+
+La información de este informe procede exclusivamente de:
+
+    - la descripción del propósito de 10_control_grupos.py;
+    - la confirmación del autor de que la ejecución falló y nunca se
+      completó con éxito;
+    - la estructura de datos utilizada en esta rama (.dat/.name/memmap);
+    - la identificación de 10_control_campo.py como control válido.
+
+No se incorporan resultados ni conocimientos procedentes de pruebas
+posteriores.
+
+======================================================================
+DICTAMEN
+======================================================================
+
+10_control_grupos.py:
+
+    DESCARTADO — ejecución con errores, sin resultados válidos.
+
+No aporta evidencia experimental al estudio.
+No debe utilizarse ni referenciarse como prueba válida.
+======================================================================

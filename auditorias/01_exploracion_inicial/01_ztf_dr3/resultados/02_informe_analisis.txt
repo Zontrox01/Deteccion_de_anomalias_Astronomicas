@@ -1,0 +1,374 @@
+ANÁLISIS DEL DATASET ZTF DR3
+Muestra por dataset: 50,000
+Semilla aleatoria: 42
+
+======================================================================
+CORRELACIONES - M31
+======================================================================
+
+PARES CON |r| >= 0.9:
+
+periodogram_amplitude                    periodogram_percent_amplitude            r= 0.9999
+mean                                     weighted_mean                            r= 0.9994
+linear_fit_reduced_chi2                  chi2                                     r= 0.9971
+inter_percentile_range_25                median_absolute_deviation                r= 0.9953
+inter_percentile_range_25                percent_difference_magnitude_percentile_20 r= 0.9903
+percent_difference_magnitude_percentile_5 standard_deviation                       r= 0.9897
+inter_percentile_range_10                standard_deviation                       r= 0.9883
+median_absolute_deviation                percent_difference_magnitude_percentile_20 r= 0.9865
+inter_percentile_range_10                percent_difference_magnitude_percentile_5 r= 0.9825
+inter_percentile_range_10                percent_difference_magnitude_percentile_20 r= 0.9823
+inter_percentile_range_25                inter_percentile_range_10                r= 0.9797
+inter_percentile_range_10                median_absolute_deviation                r= 0.9783
+amplitude                                percent_amplitude                        r= 0.9779
+percent_difference_magnitude_percentile_20 standard_deviation                       r= 0.9756
+period_s_to_n_1                          period_s_to_n_2                          r= 0.9743
+period_s_to_n_0                          period_s_to_n_1                          r= 0.9730
+percent_difference_magnitude_percentile_5 percent_difference_magnitude_percentile_20 r= 0.9714
+inter_percentile_range_25                standard_deviation                       r= 0.9712
+median_absolute_deviation                standard_deviation                       r= 0.9699
+linear_trend_sigma                       standard_deviation                       r= 0.9610
+inter_percentile_range_25                percent_difference_magnitude_percentile_5 r= 0.9596
+median_absolute_deviation                percent_difference_magnitude_percentile_5 r= 0.9578
+inter_percentile_range_10                linear_trend_sigma                       r= 0.9551
+amplitude                                standard_deviation                       r= 0.9547
+period_s_to_n_0                          period_s_to_n_2                          r= 0.9475
+linear_trend_sigma                       percent_difference_magnitude_percentile_5 r= 0.9447
+linear_trend_sigma                       median_absolute_deviation                r= 0.9410
+inter_percentile_range_25                linear_trend_sigma                       r= 0.9408
+linear_trend_sigma                       percent_difference_magnitude_percentile_20 r= 0.9360
+amplitude                                percent_difference_magnitude_percentile_5 r= 0.9302
+percent_amplitude                        standard_deviation                       r= 0.9160
+amplitude                                inter_percentile_range_10                r= 0.9137
+
+PARES CON 0.75 <= |r| < 0.9:
+
+amplitude                                linear_trend_sigma                       r= 0.8987
+amplitude                                percent_difference_magnitude_percentile_20 r= 0.8957
+period_s_to_n_0                          periodogram_percent_amplitude            r= 0.8942
+period_s_to_n_0                          periodogram_amplitude                    r= 0.8922
+amplitude                                median_absolute_deviation                r= 0.8887
+amplitude                                inter_percentile_range_25                r= 0.8877
+percent_amplitude                        percent_difference_magnitude_percentile_5 r= 0.8875
+inter_percentile_range_10                percent_amplitude                        r= 0.8631
+linear_trend_sigma                       percent_amplitude                        r= 0.8599
+period_s_to_n_1                          periodogram_percent_amplitude            r= 0.8476
+percent_amplitude                        percent_difference_magnitude_percentile_20 r= 0.8463
+period_s_to_n_1                          periodogram_amplitude                    r= 0.8453
+linear_fit_slope                         linear_trend                             r= 0.8419
+inter_percentile_range_25                percent_amplitude                        r= 0.8340
+median_absolute_deviation                percent_amplitude                        r= 0.8323
+period_s_to_n_2                          periodogram_percent_amplitude            r= 0.8221
+period_s_to_n_2                          periodogram_amplitude                    r= 0.8196
+linear_fit_slope_sigma                   mean                                     r= 0.7826
+eta                                      periodogram_standard_deviation           r=-0.7815
+linear_fit_slope_sigma                   weighted_mean                            r= 0.7814
+maximum_slope                            standard_deviation                       r= 0.7699
+periodogram_amplitude                    periodogram_beyond_2_std                 r=-0.7636
+periodogram_beyond_2_std                 periodogram_percent_amplitude            r=-0.7634
+inter_percentile_range_10                maximum_slope                            r= 0.7631
+linear_fit_slope_sigma                   linear_trend_sigma                       r= 0.7627
+maximum_slope                            percent_difference_magnitude_percentile_5 r= 0.7570
+amplitude                                maximum_slope                            r= 0.7536
+
+======================================================================
+DISTRIBUCIONES - M31
+======================================================================
+
+Las siguientes features presentan una diferencia especialmente grande entre percentiles y extremos:
+
+kurtosis                                 rango/IQR=    136.18
+linear_fit_slope                         rango/IQR=     92.98
+linear_fit_reduced_chi2                  rango/IQR=   2035.95
+linear_trend                             rango/IQR=     98.12
+period_1                                 rango/IQR=     94.83
+period_2                                 rango/IQR=    182.49
+chi2                                     rango/IQR=   1942.09
+
+Dataset M31: 57,546 objetos
+
+======================================================================
+CORRELACIONES - DEEP
+======================================================================
+
+PARES CON |r| >= 0.9:
+
+periodogram_amplitude                    periodogram_percent_amplitude            r= 1.0000
+mean                                     weighted_mean                            r= 0.9998
+inter_percentile_range_25                median_absolute_deviation                r= 0.9975
+linear_fit_reduced_chi2                  chi2                                     r= 0.9965
+inter_percentile_range_10                standard_deviation                       r= 0.9941
+percent_difference_magnitude_percentile_5 standard_deviation                       r= 0.9941
+inter_percentile_range_25                percent_difference_magnitude_percentile_20 r= 0.9937
+median_absolute_deviation                percent_difference_magnitude_percentile_20 r= 0.9924
+inter_percentile_range_10                percent_difference_magnitude_percentile_5 r= 0.9908
+period_s_to_n_1                          period_s_to_n_2                          r= 0.9896
+inter_percentile_range_10                percent_difference_magnitude_percentile_20 r= 0.9885
+percent_difference_magnitude_percentile_20 standard_deviation                       r= 0.9869
+inter_percentile_range_25                inter_percentile_range_10                r= 0.9862
+inter_percentile_range_10                median_absolute_deviation                r= 0.9858
+inter_percentile_range_25                standard_deviation                       r= 0.9853
+median_absolute_deviation                standard_deviation                       r= 0.9848
+percent_difference_magnitude_percentile_5 percent_difference_magnitude_percentile_20 r= 0.9826
+amplitude                                percent_amplitude                        r= 0.9783
+inter_percentile_range_25                percent_difference_magnitude_percentile_5 r= 0.9781
+period_s_to_n_0                          period_s_to_n_1                          r= 0.9775
+median_absolute_deviation                percent_difference_magnitude_percentile_5 r= 0.9775
+period_s_to_n_0                          period_s_to_n_2                          r= 0.9633
+amplitude                                standard_deviation                       r= 0.9527
+linear_trend_sigma                       standard_deviation                       r= 0.9447
+inter_percentile_range_10                linear_trend_sigma                       r= 0.9420
+amplitude                                percent_difference_magnitude_percentile_5 r= 0.9366
+inter_percentile_range_25                linear_trend_sigma                       r= 0.9359
+linear_trend_sigma                       median_absolute_deviation                r= 0.9351
+linear_trend_sigma                       percent_difference_magnitude_percentile_5 r= 0.9339
+linear_trend_sigma                       percent_difference_magnitude_percentile_20 r= 0.9312
+amplitude                                inter_percentile_range_10                r= 0.9298
+linear_fit_slope_sigma                   linear_trend_sigma                       r= 0.9287
+amplitude                                percent_difference_magnitude_percentile_20 r= 0.9220
+amplitude                                median_absolute_deviation                r= 0.9185
+amplitude                                inter_percentile_range_25                r= 0.9178
+percent_amplitude                        standard_deviation                       r= 0.9173
+
+PARES CON 0.75 <= |r| < 0.9:
+
+percent_amplitude                        percent_difference_magnitude_percentile_5 r= 0.8957
+inter_percentile_range_10                percent_amplitude                        r= 0.8878
+period_s_to_n_0                          periodogram_percent_amplitude            r= 0.8818
+period_s_to_n_0                          periodogram_amplitude                    r= 0.8802
+percent_amplitude                        percent_difference_magnitude_percentile_20 r= 0.8791
+inter_percentile_range_25                percent_amplitude                        r= 0.8750
+linear_fit_slope                         linear_trend                             r= 0.8745
+median_absolute_deviation                percent_amplitude                        r= 0.8744
+inter_percentile_range_10                linear_fit_slope_sigma                   r= 0.8694
+linear_fit_slope_sigma                   standard_deviation                       r= 0.8685
+linear_fit_slope_sigma                   median_absolute_deviation                r= 0.8668
+inter_percentile_range_25                linear_fit_slope_sigma                   r= 0.8630
+amplitude                                linear_trend_sigma                       r= 0.8588
+linear_fit_slope_sigma                   percent_difference_magnitude_percentile_5 r= 0.8467
+linear_fit_slope_sigma                   percent_difference_magnitude_percentile_20 r= 0.8437
+period_s_to_n_1                          periodogram_percent_amplitude            r= 0.8388
+period_s_to_n_1                          periodogram_amplitude                    r= 0.8367
+linear_trend_sigma                       percent_amplitude                        r= 0.8358
+periodogram_beyond_1_std                 periodogram_beyond_2_std                 r= 0.8186
+period_s_to_n_2                          periodogram_percent_amplitude            r= 0.8184
+period_s_to_n_2                          periodogram_amplitude                    r= 0.8161
+mean                                     standard_deviation                       r= 0.8117
+amplitude                                mean                                     r= 0.8106
+inter_percentile_range_10                mean                                     r= 0.8063
+standard_deviation                       weighted_mean                            r= 0.8036
+amplitude                                weighted_mean                            r= 0.8028
+mean                                     median_absolute_deviation                r= 0.8018
+inter_percentile_range_10                weighted_mean                            r= 0.7984
+mean                                     percent_difference_magnitude_percentile_5 r= 0.7979
+inter_percentile_range_25                mean                                     r= 0.7972
+median_absolute_deviation                weighted_mean                            r= 0.7942
+percent_difference_magnitude_percentile_5 weighted_mean                            r= 0.7897
+inter_percentile_range_25                weighted_mean                            r= 0.7894
+mean                                     percent_difference_magnitude_percentile_20 r= 0.7885
+amplitude                                linear_fit_slope_sigma                   r= 0.7859
+percent_difference_magnitude_percentile_20 weighted_mean                            r= 0.7803
+linear_fit_slope_sigma                   mean                                     r= 0.7745
+linear_fit_slope_sigma                   weighted_mean                            r= 0.7716
+mean                                     percent_amplitude                        r= 0.7587
+eta                                      periodogram_standard_deviation           r=-0.7583
+linear_fit_slope_sigma                   percent_amplitude                        r= 0.7524
+percent_amplitude                        weighted_mean                            r= 0.7501
+
+======================================================================
+DISTRIBUCIONES - DEEP
+======================================================================
+
+Las siguientes features presentan una diferencia especialmente grande entre percentiles y extremos:
+
+kurtosis                                 rango/IQR=    347.86
+linear_fit_slope                         rango/IQR=    121.59
+linear_fit_reduced_chi2                  rango/IQR=   1580.29
+period_1                                 rango/IQR=    131.52
+period_2                                 rango/IQR=    199.82
+chi2                                     rango/IQR=   1522.96
+skew                                     rango/IQR=     77.17
+
+Dataset DEEP: 406,611 objetos
+
+======================================================================
+CORRELACIONES - DISK
+======================================================================
+
+PARES CON |r| >= 0.9:
+
+periodogram_amplitude                    periodogram_percent_amplitude            r= 1.0000
+mean                                     weighted_mean                            r= 1.0000
+linear_fit_reduced_chi2                  chi2                                     r= 0.9984
+inter_percentile_range_25                median_absolute_deviation                r= 0.9983
+percent_difference_magnitude_percentile_5 standard_deviation                       r= 0.9978
+inter_percentile_range_10                standard_deviation                       r= 0.9977
+linear_trend_sigma                       standard_deviation                       r= 0.9974
+inter_percentile_range_25                percent_difference_magnitude_percentile_20 r= 0.9973
+inter_percentile_range_10                percent_difference_magnitude_percentile_5 r= 0.9968
+inter_percentile_range_10                linear_trend_sigma                       r= 0.9954
+median_absolute_deviation                percent_difference_magnitude_percentile_20 r= 0.9947
+linear_trend_sigma                       percent_difference_magnitude_percentile_5 r= 0.9946
+inter_percentile_range_10                median_absolute_deviation                r= 0.9942
+inter_percentile_range_25                inter_percentile_range_10                r= 0.9942
+inter_percentile_range_10                percent_difference_magnitude_percentile_20 r= 0.9939
+median_absolute_deviation                standard_deviation                       r= 0.9929
+inter_percentile_range_25                standard_deviation                       r= 0.9926
+percent_difference_magnitude_percentile_20 standard_deviation                       r= 0.9921
+linear_trend_sigma                       median_absolute_deviation                r= 0.9914
+percent_difference_magnitude_percentile_5 percent_difference_magnitude_percentile_20 r= 0.9909
+inter_percentile_range_25                linear_trend_sigma                       r= 0.9909
+median_absolute_deviation                percent_difference_magnitude_percentile_5 r= 0.9901
+inter_percentile_range_25                percent_difference_magnitude_percentile_5 r= 0.9899
+linear_trend_sigma                       percent_difference_magnitude_percentile_20 r= 0.9895
+period_s_to_n_0                          period_s_to_n_1                          r= 0.9855
+amplitude                                percent_amplitude                        r= 0.9829
+period_s_to_n_1                          period_s_to_n_2                          r= 0.9824
+period_s_to_n_0                          period_s_to_n_2                          r= 0.9645
+amplitude                                standard_deviation                       r= 0.9640
+amplitude                                linear_trend_sigma                       r= 0.9601
+amplitude                                percent_difference_magnitude_percentile_5 r= 0.9562
+amplitude                                maximum_slope                            r= 0.9525
+amplitude                                inter_percentile_range_10                r= 0.9519
+maximum_slope                            standard_deviation                       r= 0.9518
+periodogram_standard_deviation           periodogram_percent_amplitude            r= 0.9505
+periodogram_amplitude                    periodogram_standard_deviation           r= 0.9504
+maximum_slope                            percent_difference_magnitude_percentile_5 r= 0.9479
+linear_trend_sigma                       maximum_slope                            r= 0.9475
+amplitude                                median_absolute_deviation                r= 0.9462
+inter_percentile_range_10                maximum_slope                            r= 0.9450
+linear_fit_slope_sigma                   linear_trend_sigma                       r= 0.9437
+amplitude                                inter_percentile_range_25                r= 0.9434
+amplitude                                percent_difference_magnitude_percentile_20 r= 0.9426
+linear_fit_slope_sigma                   median_absolute_deviation                r= 0.9403
+inter_percentile_range_10                linear_fit_slope_sigma                   r= 0.9401
+maximum_slope                            median_absolute_deviation                r= 0.9399
+linear_fit_slope_sigma                   standard_deviation                       r= 0.9385
+inter_percentile_range_25                maximum_slope                            r= 0.9349
+linear_fit_slope                         linear_trend                             r= 0.9332
+inter_percentile_range_25                linear_fit_slope_sigma                   r= 0.9322
+maximum_slope                            percent_difference_magnitude_percentile_20 r= 0.9315
+linear_fit_slope_sigma                   percent_difference_magnitude_percentile_5 r= 0.9304
+periodogram_beyond_1_std                 periodogram_beyond_2_std                 r= 0.9225
+percent_amplitude                        standard_deviation                       r= 0.9211
+maximum_slope                            percent_amplitude                        r= 0.9203
+linear_fit_slope_sigma                   percent_difference_magnitude_percentile_20 r= 0.9188
+linear_fit_slope_sigma                   maximum_slope                            r= 0.9167
+linear_trend_sigma                       percent_amplitude                        r= 0.9162
+percent_amplitude                        percent_difference_magnitude_percentile_5 r= 0.9106
+inter_percentile_range_10                percent_amplitude                        r= 0.9041
+
+PARES CON 0.75 <= |r| < 0.9:
+
+amplitude                                linear_fit_slope_sigma                   r= 0.8984
+median_absolute_deviation                percent_amplitude                        r= 0.8964
+percent_amplitude                        percent_difference_magnitude_percentile_20 r= 0.8960
+inter_percentile_range_25                percent_amplitude                        r= 0.8950
+linear_fit_slope_sigma                   mean                                     r= 0.8400
+linear_fit_slope_sigma                   percent_amplitude                        r= 0.8399
+linear_fit_slope_sigma                   weighted_mean                            r= 0.8376
+beyond_1_std                             stetson_K                                r= 0.8219
+mean                                     median_absolute_deviation                r= 0.8111
+inter_percentile_range_10                mean                                     r= 0.8110
+mean                                     standard_deviation                       r= 0.8097
+maximum_slope                            mean                                     r= 0.8091
+median_absolute_deviation                weighted_mean                            r= 0.8075
+inter_percentile_range_10                weighted_mean                            r= 0.8073
+maximum_slope                            weighted_mean                            r= 0.8061
+standard_deviation                       weighted_mean                            r= 0.8060
+mean                                     percent_difference_magnitude_percentile_5 r= 0.8056
+inter_percentile_range_25                mean                                     r= 0.8042
+percent_difference_magnitude_percentile_5 weighted_mean                            r= 0.8019
+linear_trend_sigma                       mean                                     r= 0.8007
+inter_percentile_range_25                weighted_mean                            r= 0.8004
+linear_trend_sigma                       weighted_mean                            r= 0.7969
+mean                                     percent_difference_magnitude_percentile_20 r= 0.7960
+percent_difference_magnitude_percentile_20 weighted_mean                            r= 0.7921
+amplitude                                mean                                     r= 0.7828
+cusum                                    eta                                      r=-0.7802
+amplitude                                weighted_mean                            r= 0.7794
+cusum                                    periodogram_amplitude                    r= 0.7752
+cusum                                    periodogram_percent_amplitude            r= 0.7751
+period_s_to_n_2                          periodogram_beyond_2_std                 r=-0.7680
+cusum                                    periodogram_beyond_1_std                 r=-0.7671
+
+======================================================================
+DISTRIBUCIONES - DISK
+======================================================================
+
+Las siguientes features presentan una diferencia especialmente grande entre percentiles y extremos:
+
+kurtosis                                 rango/IQR=    923.97
+linear_fit_slope                         rango/IQR=     57.60
+linear_fit_reduced_chi2                  rango/IQR=   3454.27
+linear_trend                             rango/IQR=     59.38
+period_0                                 rango/IQR=   2015.85
+period_1                                 rango/IQR=   2114.25
+period_2                                 rango/IQR=   2179.78
+periodogram_amplitude                    rango/IQR=     97.54
+periodogram_standard_deviation           rango/IQR=    105.96
+periodogram_percent_amplitude            rango/IQR=     97.78
+chi2                                     rango/IQR=   3760.11
+skew                                     rango/IQR=    164.13
+
+Dataset DISK: 1,790,565 objetos
+
+======================================================================
+PCA GLOBAL
+======================================================================
+
+VARIANZA EXPLICADA:
+
+COMPONENTE            VARIANZA      ACUMULADA
+--------------------------------------------------
+1                    0.638805      0.638805
+2                    0.174040      0.812845
+3                    0.121579      0.934424
+4                    0.057966      0.992390
+5                    0.002092      0.994482
+6                    0.002042      0.996523
+7                    0.001196      0.997719
+8                    0.000721      0.998439
+9                    0.000482      0.998921
+10                   0.000202      0.999123
+11                   0.000158      0.999281
+12                   0.000115      0.999396
+13                   0.000089      0.999484
+14                   0.000074      0.999558
+15                   0.000070      0.999628
+16                   0.000064      0.999692
+17                   0.000050      0.999742
+18                   0.000044      0.999786
+19                   0.000041      0.999827
+20                   0.000033      0.999860
+21                   0.000029      0.999889
+22                   0.000021      0.999910
+23                   0.000018      0.999928
+24                   0.000014      0.999942
+25                   0.000012      0.999954
+26                   0.000012      0.999965
+27                   0.000011      0.999976
+28                   0.000008      0.999984
+29                   0.000006      0.999990
+30                   0.000003      0.999994
+31                   0.000003      0.999996
+32                   0.000001      0.999997
+33                   0.000001      0.999999
+34                   0.000000      0.999999
+35                   0.000000      0.999999
+36                   0.000000      1.000000
+37                   0.000000      1.000000
+38                   0.000000      1.000000
+39                   0.000000      1.000000
+40                   0.000000      1.000000
+41                   0.000000      1.000000
+42                   0.000000      1.000000
+
+Componentes para 80%: 2
+Componentes para 90%: 3
+Componentes para 95%: 4
+Componentes para 99%: 4
+
+======================================================================
+FIN DEL ANÁLISIS
+======================================================================
