@@ -1,0 +1,239 @@
+======================================================================
+INFORME - 08_control_estructura.py
+CONTROL DE ESTRUCTURA ENTRE DATASETS
+======================================================================
+
+FECHA DE EJECUCIÓN: 2026-08-28
+
+======================================================================
+OBJETIVO
+======================================================================
+
+El objetivo de esta prueba es comprobar si la elevada capacidad de un
+clasificador para distinguir entre los datasets M31, DEEP y DISK puede
+explicarse por diferencias en la distribución de sus variables.
+
+La pregunta planteada es:
+
+    Si se igualan las distribuciones de las variables más discriminantes
+    entre los tres datasets, ¿desaparece la capacidad de identificar su
+    procedencia?
+
+El experimento pretende por tanto comprobar si la separación observada
+entre datasets permanece cuando se reduce la influencia de las
+diferencias estadísticas entre ellos.
+
+======================================================================
+CONFIGURACIÓN
+======================================================================
+
+Muestra utilizada por dataset : 50.000 objetos
+Datasets                      : M31, DEEP, DISK
+Features disponibles          : 42
+Features utilizadas como
+variables de control          : 14
+Número de bins                : 20
+Random State                  : 42
+
+Features de control:
+
+    eta_e
+    cusum
+    linear_trend_sigma
+    linear_fit_slope_sigma
+    period_0
+    period_1
+    period_2
+    period_s_to_n_0
+    period_s_to_n_1
+    period_s_to_n_2
+    mean
+    weighted_mean
+    stetson_K
+    maximum_slope
+
+======================================================================
+EXPERIMENTO 1 - BASELINE
+======================================================================
+
+Antes de realizar el control de distribuciones se entrenaron
+clasificadores utilizando las 42 features originales.
+
+Resultados:
+
+    Random Forest : 0.988067
+    Logística     : 0.855967
+
+Objetos utilizados:
+
+    M31  : 50.000
+    DEEP : 50.000
+    DISK : 50.000
+
+El resultado muestra que, con las variables disponibles, es posible
+distinguir con elevada precisión el dataset de procedencia.
+
+Este resultado, por sí solo, no determina cuál es la causa de dicha
+separación.
+
+======================================================================
+EXPERIMENTO 2 - IGUALACIÓN DE DISTRIBUCIONES
+======================================================================
+
+Se intentó realizar un submuestreo conjunto de los tres datasets para
+conservar únicamente regiones del espacio de variables en las que los
+tres datasets estuvieran representados.
+
+El procedimiento utilizó las 14 features de control y 20 bins por
+feature.
+
+El cálculo genera un espacio multidimensional extremadamente
+fragmentado.
+
+Resultado:
+
+    RuntimeError:
+    No existen regiones comunes entre los tres datasets.
+
+El experimento no pudo continuar hasta el entrenamiento de los
+clasificadores sobre la muestra controlada.
+
+Por tanto:
+
+    Random Forest : NO DISPONIBLE
+    Logística     : NO DISPONIBLE
+    Tamaño muestra controlada : NO DISPONIBLE
+
+======================================================================
+INTERPRETACIÓN DEL RESULTADO
+======================================================================
+
+El resultado demuestra que el procedimiento de igualación utilizado no
+encontró regiones comunes entre los tres datasets en el espacio
+definido por las 14 variables y 20 bins.
+
+Esto indica que las distribuciones de estas variables presentan
+diferencias importantes entre los datasets, al menos bajo esta forma
+de discretización y matching.
+
+Sin embargo, este resultado NO permite afirmar por sí solo que:
+
+    - los datasets sean intrínsecamente diferentes;
+    - las diferencias tengan necesariamente origen físico;
+    - la clasificación al 98,8 % no pueda estar relacionada con la
+      construcción de los datasets;
+    - la procedencia esté codificada de forma física en las curvas;
+    - se haya demostrado la ausencia de sesgo.
+
+La prueba no permite separar esas posibilidades porque el experimento
+de igualación no llegó a producir una muestra común sobre la que poder
+repetir la clasificación.
+
+======================================================================
+LIMITACIÓN METODOLÓGICA
+======================================================================
+
+El espacio de búsqueda utilizado es de 14 dimensiones con 20 bins por
+dimensión.
+
+El número teórico de combinaciones de bins es:
+
+    20^14 = 163.840.000.000.000.000
+
+frente a 50.000 objetos por dataset.
+
+Por tanto, la ausencia de regiones comunes puede estar relacionada con
+la elevada dimensionalidad y fragmentación producida por el método de
+discretización.
+
+No debe interpretarse automáticamente como prueba de que no existan
+objetos comparables entre los datasets.
+
+======================================================================
+EXPERIMENTO 3 - CONTROL ESTRICTO
+======================================================================
+
+No se ejecutó debido a que el experimento de igualación de
+distribuciones no produjo una muestra común.
+
+Resultado:
+
+    Random Forest : NO DISPONIBLE
+    Logística     : NO DISPONIBLE
+
+======================================================================
+CONCLUSIONES EN EL ESTADO DEL PROYECTO EN ESTA PRUEBA
+======================================================================
+
+1. Los datasets M31, DEEP y DISK pueden distinguirse con gran precisión
+   utilizando las 42 variables disponibles.
+
+       Random Forest : 0.988067
+       Logística     : 0.855967
+
+2. Las 14 variables seleccionadas como variables de control presentan
+   distribuciones suficientemente diferentes como para que el método
+   utilizado no encuentre una región común de los tres datasets.
+
+3. El procedimiento de igualación mediante bins no ha permitido realizar
+   el experimento de control previsto.
+
+4. Por tanto, todavía no puede determinarse mediante esta prueba si la
+   elevada separación observada procede de:
+
+       - diferencias reales de las observaciones,
+       - diferencias en la construcción de los datasets,
+       - diferencias en las distribuciones estadísticas,
+       - o una combinación de estos factores.
+
+5. El resultado debe considerarse un diagnóstico de las diferencias
+   estadísticas entre datasets y una limitación del método de matching
+   utilizado, no una demostración definitiva sobre el origen de dichas
+   diferencias.
+
+======================================================================
+ESTADO DE LA PRUEBA
+======================================================================
+
+Baseline                                  : COMPLETADO
+Clasificación de procedencia              : COMPLETADO
+Igualación de distribuciones              : NO COMPLETADA
+Clasificación tras igualación              : NO REALIZADA
+Control estricto                          : NO REALIZADO
+
+La prueba 08 queda, por tanto, parcialmente completada.
+
+======================================================================
+DATOS DE ORIGEN
+======================================================================
+
+Los resultados numéricos de este informe proceden de la ejecución
+registrada de:
+
+    08_control_estructura.py
+
+Los valores del baseline proceden directamente del log de ejecución:
+
+    Random Forest : 0.988067
+    Logística     : 0.855967
+
+El error del experimento de igualación procede directamente del log:
+
+    RuntimeError: No existen regiones comunes entre los tres datasets.
+
+Las interpretaciones metodológicas incluidas en este informe se limitan
+a lo que puede concluirse a partir de dicha ejecución.
+
+No se incorporan resultados obtenidos posteriormente en el proyecto.
+
+======================================================================
+ARCHIVOS
+======================================================================
+
+Informe:
+
+    08_informe_resultado.txt
+
+======================================================================
+FIN DEL INFORME
+======================================================================
