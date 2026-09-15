@@ -1,0 +1,12 @@
+semilla,modelo,n_variables,variables,RF_ACC,RF_BAL,LOG_ACC,LOG_BAL,RF_TIME,LOG_TIME
+7,MINIMO,5,median_absolute_deviation|skew|percent_amplitude|amplitude|eta,0.85975,0.6159155764590912,0.59425,0.7100374257020527,2.860517978668213,0.4066181182861328
+7,COMPLETO,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.868125,0.638937257876379,0.671875,0.7376454710257454,3.534625291824341,1.0131001472473145
+21,MINIMO,5,median_absolute_deviation|skew|percent_amplitude|amplitude|eta,0.85925,0.6139325542571241,0.59425,0.7100374257020527,2.8220622539520264,0.41867589950561523
+21,COMPLETO,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.8675,0.6407313514016667,0.671875,0.7376454710257454,3.557394504547119,0.9210391044616699
+42,MINIMO,5,median_absolute_deviation|skew|percent_amplitude|amplitude|eta,0.858875,0.6129565961932775,0.59425,0.7100374257020527,2.698477029800415,0.36574792861938477
+42,COMPLETO,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.870625,0.6452535411404058,0.671875,0.7376454710257454,3.479461431503296,0.7537305355072021
+84,MINIMO,5,median_absolute_deviation|skew|percent_amplitude|amplitude|eta,0.860375,0.6142528910620298,0.59425,0.7100374257020527,2.591789960861206,0.37208104133605957
+84,COMPLETO,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.869875,0.6424239829585284,0.671875,0.7376454710257454,3.5597405433654785,0.7515213489532471
+123,MINIMO,5,median_absolute_deviation|skew|percent_amplitude|amplitude|eta,0.85875,0.6142151416817265,0.59425,0.7100374257020527,2.693323850631714,0.3564777374267578
+123,COMPLETO,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.868625,0.638985709254896,0.671875,0.7376454710257454,3.6569015979766846,0.7426397800445557
+42,ETIQUETAS_ALEATORIAS,12,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.67525,0.1430032637771669,0.089375,0.1525178288448705,4.8456408977508545,0.4528536796569824

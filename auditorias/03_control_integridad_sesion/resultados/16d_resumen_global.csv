@@ -1,0 +1,3 @@
+conjunto,total_grupos_intermedios,grupos_target_constante,grupos_target_distinto,pct_grupos_target_constante,frac_pares_excluidos_media
+TRAIN,1801728,89757,1711971,4.98,0.1651983063371444
+TEST,563821,26799,537022,4.75,0.1629410558296617

@@ -1,0 +1,3 @@
+modelo,variables,RF_ACC,RF_BAL,LOG_ACC,LOG_BAL,RF_TIME,LOG_TIME
+COMPLETO,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|eta|chi2|maximum_slope,0.870625,0.6452535411404058,0.671875,0.7376454710257454,5.182103633880615,0.843541145324707
+SIN_ETA_CHI2,median|standard_deviation|median_absolute_deviation|amplitude|percent_amplitude|inter_percentile_range_25|skew|kurtosis|stetson_K|maximum_slope,0.860125,0.601952036705015,0.65925,0.7198535285017338,4.894871711730957,0.6962897777557373
