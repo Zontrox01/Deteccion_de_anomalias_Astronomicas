@@ -175,8 +175,8 @@ Las contribuciones son bienvenidas. Dos consideraciones:
 Este proyecto usa datos de terceros. Si lo utilizas en un trabajo publicado, cita
 también las fuentes originales:
 
-- **StarEmbed** — Li et al. 2025, [arXiv:2510.06200](https://arxiv.org/abs/2510.06200)
-- **ZTF** — Bellm et al. 2018, *PASP* 131, 018002
+- **StarEmbed** — Li, W., Chen, H.-Y., Lin, Q., Rehemtulla, N., Shah, V. G., Wu, D., Miller, A. A., & Liu, H. (2025). StarEmbed: Benchmarking Time Series Foundation Models on Astronomical Observations of Variable Stars. arXiv:2510.06200. https://doi.org/10.48550/arXiv.2510.06200
+- **ZTF** — Malanchev, K., Kornilov, M., Aleo, P., & Korolev, V. (2020). Anomaly detection in the Zwicky Transient Facility DR3 (Version 0.1.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.4318700
 - **Catalina Surveys** — Drake et al. 2014, *ApJS* 213, 9
 - **Gaia** — [ESA Gaia Archive](https://gea.esac.esa.int/archive/)
 - **SIMBAD / VizieR** — Centre de Données astronomiques de Strasbourg
@@ -184,4 +184,4 @@ también las fuentes originales:
 
 ## Licencia
 
-Pendiente de definir.
+[MIT](LICENSE)
